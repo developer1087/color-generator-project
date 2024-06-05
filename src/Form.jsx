@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({ addColor }) => {
   const [color, setColor] = useState("");
 
   const handleChange = (e) => {
@@ -8,7 +8,7 @@ const Form = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
+    addColor(color);
   };
   return (
     <section className="container">
